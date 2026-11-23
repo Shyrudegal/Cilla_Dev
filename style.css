@@ -298,4 +298,15 @@ footer{
     margin-top: 20px;
     display: block;
 }
-
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+  h2 {
+    font-size: 26px !important;
+  }
+  .hero h1, .about h1 {
+    font-size: 32px !important;
+  }
+}
