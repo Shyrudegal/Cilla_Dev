@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilla_dev Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>  
+        <nav>
+            <h1 id="auto-type"></h1>
+        
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            <button href="chat.html">ChatCilla</button>
+        </nav>
+       <h4>Wanna Go  <a href="index.html">BACK</a> To Home</h4>
+       <style>
+  *{ margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+  body{ background:#000; color:#fff; padding:40px 20px; }
+  .container{ max-width:1000px; margin:auto; }
+
+  h1{ font-size:38px; margin-bottom:12px; color: goldenrod; text-align: center; }
+  .sub{ font-size:18px; line-height:1.5; margin-bottom:35px; color:#fff; }
+  .sub span{ color:#FFA629; font-weight:bold; }
+
+  .contact-wrap{ display:flex; gap:20px; flex-wrap:wrap; }
+
+  /* LEFT - FORM */
+  .form-box{
+    flex:1.4; min-width:300px;
+    border:1px solid #777;
+    border-radius:8px;
+    padding:25px;
+  }
+  .form-box label{ display:block; margin:18px 0 8px; font-size:17px; }
+  .form-box label:first-child{ margin-top:0; }
+  .required{ color:#FFA629; }
+  input, select, textarea{
+    width:100%; background:#000; color:#fff;
+    border:1px solid #777; border-radius:5px;
+    padding:13px 12px; font-size:15px; outline:none;
+  }
+  input::placeholder, textarea::placeholder{ color:#888; }
+  input:focus, select:focus, textarea:focus{ border-color:#FFA629; }
+  select{ color:#888; }
+  textarea{ height:110px; resize:vertical; }
+  .send-btn{
+    width:100%; margin-top:18px; padding:14px;
+    background:#FFA629; color:#000; border:none;
+    border-radius:5px; font-size:16px; font-weight:bold;
+    cursor:pointer;
+  }
+  .send-btn:hover{ background:#ffb84d; }
+
+  /* RIGHT - INFO */
+  .info-box{
+    flex:1; min-width:280px;
+    border:1px solid #777;
+    border-radius:8px;
+    padding:25px;
+  }
+  .info-item{ display:flex; gap:12px; margin-bottom:20px; font-size:16px; line-height:1.4; }
+  .info-item i{ color:#aaa; font-style:normal; font-size:18px; }
+  .info-item a{ color:#fff; text-decoration:none; }
+
+  .socials{ display:flex; gap:10px; margin:5px 0 20px 32px; }
+  .socials a{
+    width:42px; height:42px; background:#FFA629;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:6px; font-size:20px; font-weight:bold;
+    color:#000; text-decoration:none;
+  }
+
+  .map{ width:100%; height:260px; border:0; border-radius:6px; filter:grayscale(1); }
+
+
+  @media(max-width:700px){
+    .contact-wrap{ flex-direction:column; }
+    h1{ font-size:30px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Contact Us</h1>
+<p class="sub">We'd <span>love</span> to hear from you. Please fill out the form below or use our contact details.</p>
+  <div class="contact-wrap">
+
+    <!-- LEFT FORM -->
+    <form class="form-box" action="#" method="post">
+      <label>Name:</label>
+      <input type="text" placeholder="Name" required>
+
+      <label>Email: <span class="required">*</span></label>
+      <input type="email" placeholder="youremail@gmail.com" required>
+
+      <label>Subject:</label>
+      <select required>
+        <option value="">Select message</option>
+        <option>Website Design</option>
+        <option>Portfolio Website</option>
+        <option>Business Website</option>
+        <option>Other</option>
+      </select>
+
+      <label>Message:</label>
+      <textarea placeholder=""></textarea>
+
+      <button type="submit" class="send-btn">SEND MESSAGE</button>
+    </form>
+
+    <!-- RIGHT INFO -->
+    <div class="info-box">
+      <div class="info-item">
+        <i>📍</i>
+        <span>Ikotavilla, Eti osa<br>Lagos, Nigeria</span>
+      </div>
+      <div class="info-item">
+        <i>📞</i>
+        <a href="tel:+2348164728657">+2348164728657</a>
+      </div>
+      <div class="info-item">
+        <i>✉️</i>
+        <a href="mailto:cilladdev@gmail.com">cilladdev@gmail.com</a>
+      </div>
+
+      <div class="socials">
+        <a href="#">in</a>
+        <a href="#">X</a>
+        <a href="#">◉</a>
+      </div>
+
+      <!-- GOOGLE MAP -->
+      <iframe class="map" src="https://www.google.com/maps?q=Lagos,Nigeria&output=embed"></iframe>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+        <div>
+            <div class="logo">Cilla<span>_D</span>ev</div>
+            <p>Creating beautiful digital experiences</p>
+        </div>
+        <div>
+            @2026 Cilla_Dev. All rights reserved.
+        </div>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html> 

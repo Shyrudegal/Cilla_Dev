@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cilla_Dev - My Projects Diary</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif}
+  body{background:#0f0f1a;color:white;padding:20px}
+  
+  /* HEADER */
+  header{text-align:center;margin-bottom:30px}
+  header h1{font-size:32px}
+  header h1 span{color:#FFA629}
+  header p{color:#b0b0c5;margin-top:8px}
+  header .come{color:#8a7cff;margin-top:10px;display:block;text-decoration:underline}
+
+  /* FILTER BUTTONS */
+  .filters{display:flex;justify-content:center;gap:10px;margin-bottom:25px;flex-wrap:wrap}
+  .filters button{
+    background:#1e1e30;color:white;border:1px solid #333;
+    padding:10px 20px;border-radius:20px;cursor:pointer;font-weight:bold
+  }
+  .filters button.active{background:#FFA629;color:black;border-color:#FFA629}
+
+  /* GRID */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    gap:20px;max-width:1100px;margin:0 auto
+  }
+
+  /* CARD */
+  .card{background:#1e1e30;border-radius:15px;overflow:hidden;border:1px solid #333}
+  .card img, .card video{width:100%;height:220px;object-fit:cover;display:block;background:black}
+  .card-body{padding:15px}
+  .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .badge{font-size:12px;padding:5px 10px;border-radius:20px;font-weight:bold}
+  .done{background:#22c55e;color:white}
+  .ongoing{background:#FFA629;color:black}
+  .date{color:#888;font-size:13px}
+  .card-body h3{margin:5px 0 8px;font-size:19px}
+  .card-body p{color:#b0b0c5;font-size:14px;line-height:1.5}
+  .tags{margin:12px 0;display:flex;gap:6px;flex-wrap:wrap}
+  .tags span{background:#2a2a45;padding:4px 10px;border-radius:10px;font-size:12px;color:#8a7cff}
+  .view-btn{
+    display:block;text-align:center;background:#8a7cff;color:white;
+    padding:10px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:10px
+  }
+  .view-btn:hover{background:#6f5df5}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>My Projects <span>Diary</span></h1>
+  <p>Done projects and ongoing projects - by Ashetola Priscilla</p>
+  <a class="come" href="index.html">Let Go Back</a>
+</header>
+
+<div class="filters">
+  <button class="active" onclick="filterProjects('all',this)">All</button>
+  <button onclick="filterProjects('done',this)">✅ Done Projects</button>
+  <button onclick="filterProjects('ongoing',this)">🚧 Ongoing Projects</button>
+</div>
+
+<div class="grid" id="grid">
+
+  <article class="card" data-status="done">
+    <video controls poster="images/project1.jpg">
+      <source src="videos/project1.mp4" type="video/mp4">
+      Your browser no support video
+    </video>
+    <div class="card-body">
+      <div class="top"><span class="badge done">✅ DONE</span><span class="date">july 2026</span></div>
+      <h3>My Portfolio Website</h3>
+      <p>I build my own portfolio with HTML, CSS and JS. E get dark mode, projects and contact form.</p>
+      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      <a class="view-btn" href="#">View Project →</a>
+    </div>
+  </article>
+
+  <article class="card" data-status="ongoing">
+    <img src="images/project2.jpg" alt="Ongoing project">
+    <div class="card-body">
+      <div class="top"><span class="badge ongoing">🚧 ONGOING</span><span class="date">Sept 2026</span></div>
+      <h3>Online Boutique Shop</h3>
+      <p>I dey still build am. E go get cart, checkout and picture gallery for clothes. 70% done.</p>
+      <div class="tags"><span>UI/UX</span><span>Frontend</span></div>
+      <a class="view-btn" href="#">See Progress →</a>
+    </div>
+  </article>
+
+  <article class="card" data-status="done">
+    <img src="images/project3.jpg" alt="Done project">
+    <div class="card-body">
+      <div class="top"><span class="badge done">✅ DONE</span><span class="date">Oct 2026</span></div>
+      <h3>Restaurant Landing Page</h3>
+      <p>Simple fine landing page for restaurant with menu, pictures and order button.</p>
+      <div class="tags"><span>HTML</span><span>CSS</span></div>
+      <a class="view-btn" href="#">View Project →</a>
+    </div>
+  </article>
+
+</div>
+
+<script>
+function filterProjects(type, btn){
+  // Change active button color
+  document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  // Show / hide cards
+  document.querySelectorAll('.card').forEach(card => {
+    if(type === 'all' || card.dataset.status === type){
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script';
+}
+:root {
+  --bg: #080808;
+  --card: #121212;
+  --span: goldenrod;
+  --orange-glow: rgba(255,159,28,0.15);
+    --text-color: #FFFFFF;
+    --border-color: #1A1A1A;
+}
+.card:hover{
+  border-color: var(--orange);
+  box-shadow: 0 0 20px var(--orange-glow);
+}
+body {
+    background-color: var(--bg);
+    color: var(--text-color);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+.nav-links {
+    gap: 30px;
+    display: flex;
+    font-size: 25px;
+}
+.nav-links a {
+    color: grey;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    align-items: center;
+    margin-right: 50px;
+}
+.nav-links a:hover {
+    color: var(--span);
+}
+.nav-links .active {
+    color: goldenrod;
+    border-bottom: 2px solid goldenrod;
+    font-weight: 700;
+}
+nav button {
+    background:var(--border-color);
+    color: var(--text-color);
+    border: 2px solid var(--span);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display:inline-block
+}
+nav button:hover {
+    color: var(--span);
+}
+nav h1 {
+    font-size: 22px;
+    margin-top: 4px;
+    color: var(--span);
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid var(--text-color);
+}
+h4{
+    margin-top: 20px;
+}
+h4 a{
+    background: var(--bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--span);
+    padding: 6px 12px;
+    border-radius: 22px;
+}
+h2{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 38px;
+    color: var(--text-color);
+}
+h2 span{
+    color: var(--span);
+}
+.hero {
+    margin-left: -40px;
+    display: flex;
+    padding:  60px 8%;
+    justify-content: space-between;
+    min-height: 70vh;
+    background-color: var(--bg);
+    gap: 40px;
+
+}
+.small-title {
+    font-size: 15px;
+    color: var(--span);
+    margin-top: 50px;
+    margin-left: 10px;
+    letter-spacing: 3px;
+}
+.hero h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+.hero h1 span {
+    color: var(--span);
+}
+.hero h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.hero h3 span {
+    color: var(--span);
+}
+.hero p{
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 500px;
+    font-family: 'Dancing Script';
+    color: grey;
+}
+.notice {
+    font-size: 25px;
+    color: var(--span);
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+.btn{
+    margin-left: 10px;
+    gap: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    position: static;
+    background-color: var(--bg);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    padding: 5px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.hero .btn:hover{
+    background-color: var(--span);
+    color: var(--bg);
+    border-color: var(--span);
+}
+.hero-circle {
+    width: 380px;
+    height: 540px;
+    border-radius: 50%;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid grey;
+    position: absolute;
+    top: 250px;
+    left: 920px;
+}
+.hero-circle img{
+    min-width:280px ;
+    position:relative ;
+    flex: 1;
+    height:500px ;
+}
+.signature{
+    position: absolute;
+    bottom: 20px;
+    font-size: 35px;
+    color: var(--text-color);
+    font-family: 'Dancing Script', cursive;
+    opacity: 0.7;
+}
+.signature span{
+    color: var(--span);
+}
+.tag{
+    position:absolute;
+    background:var(--border-color);
+    border: 1px solid grey;
+    padding:6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--span);
+    z-index: 3;
+    display: flex;
+}
+.tag.html{
+    right: -20px;
+    top: 20%;
+}
+.tag.js{
+    bottom: 15%;
+    left: -10px;
+}
+.tag.css{
+    top:50%;
+    left:-30px ;
+}
+footer{
+    border-top: 1px solid var(--border-color);
+    padding: 40px 8%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 15px;
+    color: #7e7878;
+}
+.logo span{
+    color: var(--span);
+}
+.about{
+    margin-left: -40px;
+    display: flex;
+    padding: 60px 8%;
+    justify-content: space-between;
+    min-height: 70vh;
+    background-color: var(--bg);
+    gap: 40px;
+}
+.about h3{
+    font-size: 80px;
+    max-width: 400px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.about span{
+    color: var(--span);
+}
+.about p{
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 600px;
+    font-family: 'Dancing Script';
+    color: grey;
+}
+.about strong{
+    color: var(--span);
+    justify-content: space-between;
+    cursor: pointer;
+}
+.services{
+    margin-left: -40px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 8%;
+    justify-content: space-between;
+    min-height: 70vh;
+    background-color: var(--bg);
+    gap: 8px;
+}
+.cards{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+.card{
+    background: var(--border-color);
+    border: 4px solid grey;
+    padding: 35px 30px;
+    border-radius:20px;
+}
+.card h4{
+    margin: 15px 0 10px;
+    font-size: 38px;
+    color: var(--span);
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.card p{
+    color: grey;
+    font-size: 20px;
+    line-height: 1.4;
+}
+.card:hover{
+    border-color: var(--span);
+    transform: translatey(-15px);
+}
+.card a{
+    color: var(--span);
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+}
+
